@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/my_toolbar"
+    android:background="@color/colorWindowBackground"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/audio_green_500_24dp"
+            android:id="@+id/audioicon"
+            android:layout_marginEnd="40dp"
+            android:clickable="true"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            android:src="@drawable/equalizer_green_500_24dp"
+            android:id="@+id/equalizericon"
+            android:layout_toRightOf="@+id/audioicon"
+            android:layout_marginStart="40dp"
+            />
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>
