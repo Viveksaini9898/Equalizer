@@ -27,7 +27,6 @@ import com.db.chart.view.LineChartView;
 
 import java.util.ArrayList;
 
-import static com.bullhead.equalizer.DialogEqualizerFragment.ARG_AUDIO_SESSIOIN_ID;
 
 
 /**
@@ -145,7 +144,7 @@ public class EqualizerFragment extends Fragment {
             }
         });
 */
-        fragTitle = view.findViewById(R.id.equalizer_fragment_title);
+        //fragTitle = view.findViewById(R.id.equalizer_fragment_title);
 
 
         equalizerSwitch = view.findViewById(R.id.equalizer_switch);
@@ -171,7 +170,7 @@ public class EqualizerFragment extends Fragment {
 
         presetSpinner = view.findViewById(R.id.equalizer_preset_spinner);
 
-        equalizerBlocker = view.findViewById(R.id.equalizerBlocker);
+       // equalizerBlocker = view.findViewById(R.id.equalizerBlocker);
 
 
        // chart = view.findViewById(R.id.lineChart);
@@ -181,8 +180,8 @@ public class EqualizerFragment extends Fragment {
         bassController = view.findViewById(R.id.controllerBass);
         reverbController = view.findViewById(R.id.controller3D);
 
-        bassController.setLabel("BASS");
-        reverbController.setLabel("3D");
+        /*bassController.setLabel("BASS");
+        reverbController.setLabel("3D");*/
 
         bassController.circlePaint2.setColor(themeColor);
         bassController.linePaint.setColor(themeColor);

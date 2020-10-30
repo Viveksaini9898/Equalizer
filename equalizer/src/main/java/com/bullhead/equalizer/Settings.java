@@ -2,7 +2,7 @@ package com.bullhead.equalizer;
 
 public class Settings {
     public static boolean isEqualizerEnabled = true;
-   // public static boolean isEqualizerDisable = false;
+    public static boolean isEqualizerDisable = false;
     public static boolean isEqualizerReloaded = true;
     public static int[] seekbarpos = new int[5];
     public static int presetPos;

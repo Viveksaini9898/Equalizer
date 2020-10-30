@@ -1,3 +1,4 @@
+/*
 package com.bullhead.equalizer;
 
 
@@ -194,8 +195,8 @@ public class DialogEqualizerFragment extends DialogFragment {
         bassController   = view.findViewById(R.id.controllerBass);
         reverbController = view.findViewById(R.id.controller3D);
 
-        bassController.setLabel("BASS");
-        reverbController.setLabel("3D");
+        //bassController.setLabel("BASS");
+       // reverbController.setLabel("3D");
 
 
         bassController.circlePaint2.setColor(themeColor);
@@ -570,3 +571,4 @@ public class DialogEqualizerFragment extends DialogFragment {
 
 
 }
+*/

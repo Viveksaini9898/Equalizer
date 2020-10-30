@@ -29,24 +29,17 @@ class SplashActivity : AppCompatActivity() {
                 ) {
                     val intent = Intent(this@SplashActivity, MainActivity::class.java)
                     startActivity(intent)
-                    Toast.makeText(
+                    /*Toast.makeText(
                         this@SplashActivity,
                         "Permission already granted",
                         Toast.LENGTH_SHORT
-                    ).show()
+                    ).show()*/
                     finish()
                 } else {
-                    ActivityCompat.requestPermissions(
-                        this@SplashActivity,
-                        arrayOf(
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                            Manifest.permission.READ_EXTERNAL_STORAGE
-                        ),
-                        REQ_CODE
-                    )
+                    ActivityCompat.requestPermissions(this@SplashActivity, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE), REQ_CODE)
                 }
             }
-        }, 500)
+        }, 1000)
     }
 
     override fun onRequestPermissionsResult(

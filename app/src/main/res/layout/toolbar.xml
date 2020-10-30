@@ -15,22 +15,44 @@
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:scaleType="centerInside"
             android:src="@drawable/audio_green_500_24dp"
             android:id="@+id/audioicon"
             android:layout_marginEnd="40dp"
             android:clickable="true"
+
+            />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="3dp"
+            android:id="@+id/vAudioicon"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/audioicon"
+            android:background="@drawable/gradient"
             />
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:scaleType="centerInside"
             android:clickable="true"
             android:src="@drawable/equalizer_green_500_24dp"
             android:id="@+id/equalizericon"
             android:layout_toRightOf="@+id/audioicon"
+            android:layout_marginStart="40dp"
+            />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="3dp"
+            android:id="@+id/vEqualizerIcon"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/equalizericon"
+            android:layout_toEndOf="@+id/audioicon"
+            android:background="@drawable/gradient"
+            android:visibility="gone"
             android:layout_marginStart="40dp"
             />
     </RelativeLayout>

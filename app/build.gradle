@@ -37,7 +37,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
    // implementation 'com.chibde:audiovisualizer:2.2.0'
     implementation 'com.gauravk.audiovisualizer:audiovisualizer:0.9.2'
-
+    implementation 'com.github.fornewid:neumorphism:0.2.1'
+    implementation 'com.github.sshadkany:Android_neumorphic:1.2.0'
+  //  implementation 'com.github.Borutsky:neumorphism-android:1.0.0-alpha01'
 
 
 

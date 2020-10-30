@@ -11,9 +11,9 @@
         android:layout_marginStart="10dp"
         android:layout_toLeftOf="@+id/lLayout2"
         android:padding="5dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/gradient"
         android:layout_marginEnd="10dp"
-        android:id="@+id/lLayout1"
+        android:id="@+id/linearLayout1"
 
         >
 
@@ -22,8 +22,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/songName"
             android:text="Song Name"
+            android:lines="1"
             android:layout_marginStart="5dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="5dp"
             android:textStyle="bold"
             />
 
@@ -32,9 +33,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/ArtistName"
             android:text="ArtistName"
+            android:lines="1"
             android:layout_marginTop="2dp"
             android:layout_marginStart="5dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="5dp"
             android:textStyle="bold"
             />
 
@@ -62,6 +64,7 @@
             android:id="@+id/pause"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:clickable="true"
             android:src="@drawable/play_arrow_green_500_24dp"/>
 
         <ImageView

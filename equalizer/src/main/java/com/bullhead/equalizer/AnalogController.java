@@ -22,7 +22,7 @@ public class AnalogController extends View {
 
     onProgressChangedListener mListener;
 
-    String label;
+  //  String label;
 
     public interface onProgressChangedListener {
         void onProgressChanged(int progress);
@@ -66,7 +66,7 @@ public class AnalogController extends View {
 //        linePaint.setColor(Color.parseColor("#FFA036"));
         linePaint.setStrokeWidth(7);
         angle = "0.0";
-        label = "Label";
+       // label = "Label";
     }
 
     @Override
@@ -104,7 +104,7 @@ public class AnalogController extends View {
         canvas.drawCircle(midx, midy, radius * ((float) 13 / 15), circlePaint);
         circlePaint.setColor(Color.parseColor("#000000"));
         canvas.drawCircle(midx, midy, radius * ((float) 11 / 15), circlePaint);
-        canvas.drawText(label, midx, midy + (float) (radius * 1.1), textPaint);
+       // canvas.drawText(label, midx, midy + (float) (radius * 1.1), textPaint);
         canvas.drawLine(x1, y1, x2, y2, linePaint);
 
     }
@@ -173,14 +173,14 @@ public class AnalogController extends View {
         deg = param + 2;
     }
 
-    public String getLabel() {
+   /* public String getLabel() {
         return label;
     }
 
     public void setLabel(String txt) {
         label = txt;
     }
-
+*/
     public int getLineColor() {
         return lineColor;
     }
