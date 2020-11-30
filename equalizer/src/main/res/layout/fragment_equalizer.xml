@@ -70,7 +70,7 @@
 
             <Spinner
                 android:id="@+id/equalizer_preset_spinner"
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="5dp"
                 android:background="@android:color/transparent" />
@@ -122,6 +122,9 @@
                         android:layout_height="0dp"
                         android:layout_marginTop="20dp"
                         android:padding="10dp"
+                        android:indeterminate="false"
+                        android:splitTrack="false"
+                        android:progressDrawable="@drawable/custom_progress"
                         android:thumb="@drawable/custom_equalizer_thumb"
                         app:seekBarRotation="CW270" />
                 </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
@@ -151,6 +154,9 @@
                         android:layout_height="0dp"
                         android:layout_marginTop="20dp"
                         android:padding="10dp"
+                        android:indeterminate="false"
+                        android:splitTrack="false"
+                        android:progressDrawable="@drawable/custom_progress"
                         android:thumb="@drawable/custom_equalizer_thumb"
                         app:seekBarRotation="CW270" />
                 </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
@@ -180,6 +186,9 @@
                         android:layout_height="0dp"
                         android:layout_marginTop="20dp"
                         android:padding="10dp"
+                        android:indeterminate="false"
+                        android:splitTrack="false"
+                        android:progressDrawable="@drawable/custom_progress"
                         android:thumb="@drawable/custom_equalizer_thumb"
                         app:seekBarRotation="CW270" />
                 </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
@@ -208,6 +217,9 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_marginTop="20dp"
+                        android:indeterminate="false"
+                        android:splitTrack="false"
+                        android:progressDrawable="@drawable/custom_progress"
                         android:padding="10dp"
                         android:thumb="@drawable/custom_equalizer_thumb"
                         app:seekBarRotation="CW270" />
@@ -238,6 +250,9 @@
                         android:layout_height="0dp"
                         android:layout_marginTop="20dp"
                         android:padding="10dp"
+                        android:indeterminate="false"
+                        android:splitTrack="false"
+                        android:progressDrawable="@drawable/custom_progress"
                         android:thumb="@drawable/custom_equalizer_thumb"
                         app:seekBarRotation="CW270" />
                 </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>

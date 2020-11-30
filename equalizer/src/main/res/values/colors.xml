@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorWindowBackground">#000</color>
+    <color name="black">#000000</color>
+    <color name="startcolor">#f2311d</color>
+    <color name="endcolor">#cc0fb5</color>
+    <color name="green">#FF0FCC0F</color>
 </resources>

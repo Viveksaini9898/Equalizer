@@ -20,6 +20,360 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#494444"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="3dp"
+            android:id="@+id/liLight"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:id="@+id/leftRed2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_red"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_red"
+                   />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftRed1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_red"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_red"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftOrange2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_orange"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_orange"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftOrange1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_orange"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_orange"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftYellow3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_yellow"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_yellow"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftYellow2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_yellow"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_yellow"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftYellow1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_yellow"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_yellow"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftBlue4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_blue"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_blue"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftBlue3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_blue"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_blue"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftBlue2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_blue"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_blue"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftBlue1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_blue"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_blue"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftGreen5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_spectrum_light_green" />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_green"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftGreen4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_green"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_green"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftGreen3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_green"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_green"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftGreen2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_green"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_green"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/leftGreen1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_spectrum_light_green"
+                    />
+
+                <TextView
+                    android:layout_width="13dp"
+                    android:layout_height="8dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/bg_spectrum_light_green"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_centerInParent="true"
             >
@@ -42,11 +396,364 @@
                 android:gravity="center_horizontal"
 
                 />
+        </LinearLayout>
 
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#494444"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="3dp"
+            android:id="@+id/liLight1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:id="@+id/rightRed2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_red"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_red"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightRed1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_red"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_red"
+                />
 
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightOrange2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_orange"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_orange"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightOrange1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_orange"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_orange"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightYellow3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_yellow"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_yellow"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightYellow2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_yellow"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_yellow"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightYellow1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_yellow"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_yellow"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightBlue4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_blue"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_blue"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightBlue3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_blue"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_blue"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightBlue2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_blue"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_blue"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightBlue1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_blue"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_blue"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightGreen5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightGreen4"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightGreen3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightGreen2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:id="@+id/rightGreen1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+
+            <TextView
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/bg_spectrum_light_green"
+                />
+        </LinearLayout>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
@@ -68,11 +775,11 @@
 
             />
 
-        <SeekBar
+        <androidx.appcompat.widget.AppCompatSeekBar
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:id="@+id/seekbar"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="30dp"
             android:layout_marginStart="10dp"
             android:layout_gravity="center"
            />
@@ -284,10 +991,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:textColor="@android:color/white"
-            android:layout_alignParentEnd="true"
             />
     </RelativeLayout>
-
-
 
 </RelativeLayout>

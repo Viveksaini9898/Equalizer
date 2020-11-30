@@ -33,7 +33,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/ArtistName"
             android:text="ArtistName"
-            android:lines="1"
             android:layout_marginTop="2dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
@@ -54,10 +53,10 @@
 
         <ImageView
             android:id="@+id/prev"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/previous_green_500_24dp"
+            android:src="@drawable/btn_pre"
             />
 
         <ImageView
@@ -65,14 +64,14 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:clickable="true"
-            android:src="@drawable/play_arrow_green_500_24dp"/>
+            android:src="@drawable/btn_play"/>
 
         <ImageView
             android:id="@+id/next"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/next_green_500_24dp"/>
+            android:src="@drawable/btn_next"/>
     </LinearLayout>
 
 

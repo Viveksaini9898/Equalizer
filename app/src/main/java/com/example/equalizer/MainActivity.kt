@@ -11,10 +11,12 @@ import android.net.Uri
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.provider.MediaStore
+import android.text.TextUtils
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.widget.SeekBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bullhead.equalizer.EqualizerFragment
@@ -22,6 +24,9 @@ import com.bullhead.equalizer.EqualizerModel
 import com.bullhead.equalizer.Settings
 import com.example.equalizer.AsyncTask.DataFetcherAsyncTask
 import com.example.equalizer.AsyncTask.DataFetcherListener
+import com.example.equalizer.receiver.AmazonReceiver
+import com.example.equalizer.receiver.MIUIReceiver
+import com.example.equalizer.receiver.SpotifyReceiver
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.footer.*
@@ -51,12 +56,15 @@ class MainActivity : AppCompatActivity() {
         setPause()
         nextAudio()
         preAudio()
+        scroleText(this.songName)
+        scroleText(this.ArtistName)
         val manager: AudioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
         if (manager.isMusicActive) {
             loadTrcakMusic()
         }
         else{
             loadTrcakMusic()
+
            // Toast.makeText(this, "You must play a song first!", Toast.LENGTH_SHORT).show()
         }
 
@@ -109,6 +117,7 @@ class MainActivity : AppCompatActivity() {
             audio.setStreamVolume(AudioManager.STREAM_MUSIC, minVolume, 0)
             seekbar.setProgress(minVolume)
 
+
         }
 
         button30.setOnClickListener {
@@ -147,8 +156,8 @@ class MainActivity : AppCompatActivity() {
         audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager?;
         val maxVolume = audioManager!!.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
         val curVolume = audioManager!!.getStreamVolume(AudioManager.STREAM_MUSIC)
-        seekbar.setMax(maxVolume);
-        seekbar.setProgress(curVolume);
+        seekbar.setMax(maxVolume)
+        seekbar.setProgress(curVolume)
         seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {
                 audioManager!!.setStreamVolume(AudioManager.STREAM_MUSIC, i, 0)
@@ -160,6 +169,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun scroleText(textView: TextView?) {
+        if (textView != null) {
+            textView.setHorizontallyScrolling(true)
+            textView.setSingleLine(true)
+            textView.isSelected = true
+            textView.isFocusable = true
+            textView.isFocusableInTouchMode = true
+            textView.ellipsize = TextUtils.TruncateAt.MARQUEE
+        }
+    }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
@@ -189,7 +208,6 @@ class MainActivity : AppCompatActivity() {
             if (context != null) {
                 DataFetcherAsyncTask(context, this, song_id).execute()
             }
-            var pendingResult=goAsync()
         }
 
         override fun onDataFetched(result: Uri) {
@@ -232,21 +250,28 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadTrcakMusic() {
-        val iF = IntentFilter()
-        iF.addAction("com.android.music.metachanged")
-        iF.addAction("com.android.music.playstatechanged")
-        iF.addAction("com.android.music.playbackcomplete")
-        iF.addAction("com.android.music.queuechanged")
-        iF.addAction("com.samsung.sec.android.MusicPlayer.metachanged")
-        iF.addAction("com.spotify.music.playbackstatechanged")
-        iF.addAction("com.spotify.music.metadatachanged")
-        iF.addAction("com.spotify.music.queuechanged")
-        iF.addAction("com.apple.android.music.metachanged")
-        iF.addAction("com.apple.android.music.playstatechanged")
-        iF.addAction("com.rdio.android.metachanged")
-        iF.addAction("com.rdio.android.playstatechanged")
-        iF.addAction("android.media.VOLUME_CHANGED_ACTION");
-        registerReceiver(Receiver(), iF)
+        val filter = IntentFilter()
+        filter.addAction("com.android.music.metachanged")
+        filter.addAction("com.android.music.playstatechanged")
+        filter.addAction("com.android.music.playbackcomplete")
+        filter.addAction("com.android.music.queuechanged")
+        filter.addAction("android.media.VOLUME_CHANGED_ACTION");
+        registerReceiver(Receiver(), filter)
+
+        val  filter1=IntentFilter("com.spotify.music.playbackstatechanged")
+        filter1.addAction("com.spotify.music.metadatachanged")
+        filter1.addAction("com.spotify.music.queuechanged")
+        registerReceiver(SpotifyReceiver(),filter1)
+
+        val  filter2=IntentFilter("com.amazon.mp3.playstatechanged")
+        filter2.addAction("com.amazon.mp3.metachanged")
+        filter2.addAction("com.amazon.mp3.playbackcomplete")
+        registerReceiver(AmazonReceiver(),filter2)
+
+        val  filter3=IntentFilter(".player.metachanged")
+        filter3.addAction("com.miui.player.playstatechanged")
+        filter3.addAction("com.miui.player.playbackcomplete")
+        registerReceiver(MIUIReceiver(),filter3)
     }
     private fun getRealPathFromURI(contentUri: Uri?): String? {
         val uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
@@ -391,13 +416,13 @@ class MainActivity : AppCompatActivity() {
         pause.setOnClickListener {
             if (mediaPlayer!!.isPlaying) {
                 mediaPlayer!!.pause()
-                pause.setImageResource(R.drawable.play_arrow_green_500_24dp)
+                pause.setImageResource(R.drawable.btn_play)
                 val i = Intent("com.android.music.musicservicecommand")
                 i.putExtra("command", "pause")
                 sendBroadcast(i)
             } else {
                 mediaPlayer!!.start()
-                pause.setImageResource(R.drawable.pause_green_500_24dp)
+                pause.setImageResource(R.drawable.btn_pause)
                 val i = Intent("com.android.music.musicservicecommand")
                 i.putExtra("command", "play")
                 sendBroadcast(i)

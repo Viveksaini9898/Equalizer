@@ -8,6 +8,12 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
 
     <application
         android:allowBackup="true"
@@ -27,14 +33,148 @@
 
         </activity>
 
-        <receiver android:name=".MainActivity$Receiver"
-            tools:ignore="Instantiatable">
+
+        <receiver android:name="com.example.equalizer.receiver.AndroidMusicReceiver" android:enabled="true" android:exported="true">
             <intent-filter>
-                <action android:name="com.example.equalizer.android.action.broadcast" />
+                <action android:name="com.android.music.playstatechanged"/>
+                <action android:name="com.android.music.metachanged"/>
+                <action android:name="com.android.music.playbackcomplete"/>
+                <action android:name="com.android.music.queuechanged" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.AmazonReceiver">
+            <!--<intent-filter>
+                <action android:name="com.amazon.mp3.playstatechanged"/>
+                <action android:name="com.amazon.mp3.metachanged"/>
+                <action android:name="com.amazon.mp3.playbackcomplete"/>
+            </intent-filter>-->
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.HuaweiReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.mediacenter.metachanged"/>
+                <action android:name="com.android.mediacenter.playbackcomplete"/>
+                <action android:name="com.android.mediacenter.playstatechanged"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.HTCReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.htc.music.metachanged"/>
+                <action android:name="com.htc.music.playbackcomplete"/>
+                <action android:name="com.htc.music.playstatechanged"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.MIUIReceiver"
+            android:enabled="true" android:exported="true">
+           <!-- <intent-filter>
+                <action android:name=".player.metachanged"/>
+                <action android:name="com.miui.player.playstatechanged"/>
+                <action android:name="com.miui.player.playbackcomplete"/>
+            </intent-filter>-->
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.JrtStudioReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.jrtstudio.music.metachanged"/>
+                <action android:name="com.jrtstudio.music.playstatechanged"/>
+                <action android:name="com.jrtstudio.music.playbackcomplete"/>
+                <action android:name="com.jrtstudio.AnotherMusicPlayer.playstatechanged"/>
+                <action android:name="com.jrtstudio.AnotherMusicPlayer.metachanged"/>
+                <action android:name="com.jrtstudio.AnotherMusicPlayer.playbackcomplete"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.LGReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.lge.music.metachanged"/>
+                <action android:name="com.lge.music.playstatechanged"/>
+                <action android:name="com.lge.music.endofplayback"/>
+                <action android:name="com.lge.media.musicflow.action.MEDIA_PLAY_PAUSE"/>
+                <action android:name="com.lge.media.musicflow.action.MEDIA_PLAY"/>
+                <action android:name="com.lge.media.musicflow.action.MEDIA_PAUSE"/>
+                <action android:name="com.lge.media.musicflow.action.MEDIA_CLOSE"/>
+                <action android:name="com.lge.media.musicflow.action.MEDIA_NEXT"/>
+                <action android:name="com.lge.media.musicflow.action.MEDIA_STOP"/>
+                <action android:name="com.lge.media.musicflow.action.MEDIA_PRE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.MyTMusicReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.real.IMP.metachanged"/>
+                <action android:name="com.real.IMP.playbackcomplete"/>
+                <action android:name="com.real.IMP.playstatechanged"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.PowerAmpReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.music.playstatechanged"/>
+                <action android:name="com.android.music.metachanged"/>
+                <action android:name="com.android.music.playbackcomplete"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.MusixmatchReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.musixmatch.android.lyrify.metachanged"/>
+                <action android:name="com.musixmatch.android.lyrify.playstatechanged"/>
+                <action android:name="com.musixmatch.android.lyrify.playbackcomplete"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.PlayerProReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.tbig.playerprotrial.metachanged"/>
+                <action android:name="com.tbig.playerprotrial.playstatechanged"/>
+                <action android:name="com.tbig.playerprotrial.playbackcomplete"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.SamsungReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.samsung.sec.android.metachanged"/>
+                <action android:name="com.samsung.sec.android.playbackcomplete"/>
+                <action android:name="com.samsung.sec.android.playstatechanged"/>
+                <action android:name="com.samsung.sec.android.MusicPlayer.playbackcomplete"/>
+                <action android:name="com.samsung.sec.android.MusicPlayer.playstatechanged"/>
+                <action android:name="com.samsung.music.metachanged"/>
+                <action android:name="com.samsung.music.playbackcomplete"/>
+                <action android:name="com.samsung.music.playstatechanged"/>
+                <action android:name="com.samsung.sec.metachanged"/>
+                <action android:name="com.samsung.sec.android.MusicPlayer.metachanged"/>
+                <action android:name="com.samsung.sec.playbackcomplete"/>
+                <action android:name="com.samsung.sec.playstatechanged"/>
+                <action android:name="com.samsung.MusicPlayer.metachanged"/>
+                <action android:name="com.samsung.MusicPlayer.playbackcomplete"/>
+                <action android:name="com.samsung.MusicPlayer.playstatechanged"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.RdioMusicReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.rdio.android.playstatechanged"/>
+                <action android:name="com.rdio.android.metachanged"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.ScrobbleDroidReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="net.jjc1138.android.scrobbler.action.MUSIC_STATUS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.SEMCReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.sonyericsson.music.playbackcomplete"/>
+                <action android:name="com.sonyericsson.music.metachanged"/>
+                <action android:name="com.sonyericsson.music.playbackcontrol.ACTION_PLAYBACK_PLAY"/>
+                <action android:name="com.sonyericsson.music.playbackcontrol.ACTION_PLAYBACK_PAUSE"/>
+                <action android:name="com.sonyericsson.music.playstatechanged"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.equalizer.receiver.WalkmanReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.sonyericsson.music.TRACK_COMPLETED"/>
+                <action android:name="com.sonyericsson.music.playbackcontrol.ACTION_SKIPPED"/>
+                <action android:name="com.sonyericsson.music.playbackcontrol.ACTION_PAUSED"/>
+                <action android:name="com.sonyericsson.music.playbackcontrol.ACTION_TRACK_STARTED"/>
             </intent-filter>
         </receiver>
 
 
+        <receiver
+            android:name=".receiver.SpotifyReceiver">
+        </receiver>
     </application>
 
 </manifest>
